@@ -3,6 +3,7 @@ using System;
 using ArtGallery.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ArtGallery.Migrations
 {
     [DbContext(typeof(ArtGalleryDbContext))]
-    partial class ArtGalleryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220508131921_art_update_2")]
+    partial class art_update_2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,10 +37,6 @@ namespace ArtGallery.Migrations
                         .HasColumnType("Varchar(24)");
 
                     b.Property<string>("Artist")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("text");
 

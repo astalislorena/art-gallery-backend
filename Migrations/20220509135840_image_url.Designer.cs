@@ -3,6 +3,7 @@ using System;
 using ArtGallery.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ArtGallery.Migrations
 {
     [DbContext(typeof(ArtGalleryDbContext))]
-    partial class ArtGalleryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220509135840_image_url")]
+    partial class image_url
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
